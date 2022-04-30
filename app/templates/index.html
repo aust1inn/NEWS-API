@@ -20,17 +20,20 @@
             </div>
             <div class="col-md-9">
                 <h4>Today's headlines</h4>
-                {% for headline in headlines %}
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{headline.image}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">{{headline.title}}</h5>
-                          <p class="card-text">{{headline.description}}</p>
-                          <a href="{{headline.url}}" target="blank" class="btn btn-primary">Read more</a>
-                        </div>
-                      </div>
-                {% endfor %}
+                <div class="d-flex flex-wrap">
 
+                {% for headline in headlines %}
+                        <div class="card " style="width: 18rem;">
+                            <img src="{{headline.image}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">{{headline.title}}</h5>
+                              <p class="card-text">{{headline.description}}</p>
+                              <a href="{{headline.url}}" target="blank" class="btn btn-primary">Read more</a>
+                            </div>
+                    </div>
+                    
+                {% endfor %}
+                </div>
 
             </div>
         </div>
