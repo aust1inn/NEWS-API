@@ -8,12 +8,21 @@
     <title>News</title>
 </head>
 <body>
-    <div class="container">
-        <p>News Sources</p>
-        <ul class="list-group">
-            {% for source in sources %}
-                <li class="list-group-item"><a class="link-secondary text-muted" href="{{ source.url}}">{{source.id}}</a></li>
-            {% endfor %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="list-group">
+                    <h4>News Sources</h4>
+
+                    {% for source in sources %}
+                        <li class="list-group-item"><a class="link-secondary text-muted" href="{{ source.url}}">{{source.id}}</a></li>
+                    {% endfor %}
+            </div>
+            <div class="col-md-9">
+                <h4>Today's headlines</h4>
+            </div>
+        </div>
+       
     </div>
    
 </body>
