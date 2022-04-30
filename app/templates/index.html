@@ -15,7 +15,7 @@
                     <h4>News Sources</h4>
 
                     {% for source in sources %}
-                        <li class="list-group-item"><a class="link-secondary text-muted" href="{{ source.url}}">{{source.id}}</a></li>
+                        <li class="list-group-item"><a class="link-secondary text-muted" href="{{ source.url}}" target="blank">{{source.id}}</a></li>
                     {% endfor %}
             </div>
             <div class="col-md-9">
@@ -23,11 +23,13 @@
                 <div class="d-flex flex-wrap">
 
                 {% for headline in headlines %}
-                        <div class="card " style="width: 18rem;">
+                        <div class="card mt-3 px-2" style="width: 18rem;">
                             <img src="{{headline.image}}" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">{{headline.title}}</h5>
-                              <p class="card-text">{{headline.description}}</p>
+                              <p class="card-text ">{{headline.description}}</p>
+                              <p class="blockquote-footer">By {{headline.author}}</p>
+                              <p>posted on {{headline.time}}</p>
                               <a href="{{headline.url}}" target="blank" class="btn btn-primary">Read more</a>
                             </div>
                     </div>
