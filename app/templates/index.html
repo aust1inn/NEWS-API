@@ -8,6 +8,10 @@
 </head>
 <body>
     <p>page works</p>
-    <p>{{source.id}}</p>
+    <ul>
+        {% for source in sources %}
+            <li>{{ source.id}}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
